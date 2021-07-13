@@ -7,12 +7,14 @@ import (
 	"github.com/google/uuid"
 )
 
+//Generates uuids
 func createIDS() uuid.UUID {
 	id := uuid.New()
 
 	return id
 }
 
+// Creates file and writes to file
 func writeToFile(id uuid.UUID) {
 	file, err := os.Create("uuids.txt")
 
