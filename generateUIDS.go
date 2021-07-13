@@ -7,6 +7,8 @@ import (
 	"github.com/google/uuid"
 )
 
+const SIZE = 1_000_000
+
 //Generates uuids
 func createIDS() uuid.UUID {
 	id := uuid.New()
@@ -24,7 +26,7 @@ func writeToFile(id uuid.UUID) {
 
 	defer file.Close()
 
-	for i := 0; i < 1_000_000; i++ {
+	for i := 0; i < SIZE; i++ {
 		_, err := file.WriteString(createIDS().String() + "\n")
 
 		if err != nil {
