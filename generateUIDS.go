@@ -36,6 +36,5 @@ func writeToFile(id uuid.UUID) {
 }
 
 func main() {
-
 	writeToFile(createIDS())
 }
